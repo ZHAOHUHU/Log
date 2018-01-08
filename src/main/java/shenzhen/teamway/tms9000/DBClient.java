@@ -21,7 +21,7 @@ public class DBClient {
 		boolean flag = false;
 		TTransport transport = null;
 		try {
-			transport = new TFramedTransport(new TSocket("localhost",10745));
+			transport = new TFramedTransport(new TSocket("192.168.12.15",10745));
 			TProtocol protocol = new TBinaryProtocol(transport);
 			DbService.Client client = new DbService.Client(protocol);
 			transport.open();

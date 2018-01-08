@@ -25,8 +25,7 @@ public class AlarmClient {
 	    AlarmModel model =new AlarmModel();
 		try {
 			// 设置传输通道，对于非阻塞服务，需要使用TFramedTransport，它将数据分块发送
-			TTransport transport = new TFramedTransport(new TSocket("192.168.12.15", 10730));
-			//TTransport transport = new TFramedTransport(new TSocket("localhost", 10745));
+			TTransport transport = new TFramedTransport(new TSocket("localhost", 10730));
 			transport.open();
 			// 协议要和服务端一致
 			// HelloTNonblockingServer
